@@ -1,0 +1,39 @@
+ayingname = input("Enter your name: ").title()
+print(f"\nHello, {ayingname}!")
+
+
+print("Choose what you want to calculate")
+
+ayingchoices = input ("1 Power, 2 Voltage, 3 Current \n"
+                      "select your chocie: ")
+if ayingchoices == "1":
+    print("Hello Choice 1 Power",
+          "Calculator")
+if ayingchoices == "2":
+    print("Hello Choice 2 Voltage",
+          "Calculator")
+if ayingchoices == "3":
+    print("Hello Choicce 3 Current",
+          "Calculator")
+
+
+ayingchoice = input("Enter your choice: ")
+
+if ayingchoice == "1":
+    voltage = float(input("Enter voltage: "))
+    current = float(input("Enter current: "))
+    power = voltage * current
+    print("Your calculated power", power)
+
+elif ayingchoice == "2":
+    power = float(input("Enter power: "))
+    current = float(input("Enter current: "))
+    voltage = power / current
+    print("Your calculated voltage", voltage)
+
+elif ayingchoice == "3":
+    power = float(input("Enter power: "))
+    voltage = float(input("Enter voltage: "))
+    current = power / voltage
+print("Your calculated current", current)
+    
