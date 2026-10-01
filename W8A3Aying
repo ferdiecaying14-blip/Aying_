@@ -1,0 +1,25 @@
+#Practice 1
+students = {
+    "Albert": 85,
+    "John": 90,
+    "Shoriki": 78,
+    "James": 95
+}
+print("STUDENT GRADES")
+print("------------------------------")
+print("Albert", students["Albert"])
+print("John", students["John"])
+# Add a new student
+students["Ella"] = 88
+# Update a students's grade
+students["Shoriki"] = 82
+students["James"]  = 91
+name1 = input("Enter student name: ")
+grade1 = int(input("Enter grade: "))
+students[name1] = grade1
+print(students)
+print("\nUpdated Students Grdaes")
+print("-----------------------------")
+for name, grade in students.items():
+    print(name, ":", grade)
+
