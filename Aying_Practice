@@ -1,0 +1,31 @@
+
+patients={"Aying": (105, 130, 400),
+          "Gaven":(80,50,100)}
+
+normal=120
+
+print(patients)
+for key,value in patients.items():
+    # print(key,*value)
+    if(key=="Aying"):
+        print("Aying")
+        print("Blood sugar summary -")
+    print(key)
+    print(value)
+    for v in value:
+        if v>normal:
+          print(v, "diabetic")
+        else:
+            print(v, "normal")
+
+    highest=max(value)
+    print("Highest blood sugar count" ,highest, "-", key)
+    print(highest, key)
+    lowest=min(value)
+    print(lowest, key)
+    diff=highest-lowest
+    print(diff)
+
+
+
+
