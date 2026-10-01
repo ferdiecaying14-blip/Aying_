@@ -1,0 +1,28 @@
+aying_flavor = input("Enter pizza flavor (Hawaiian/Pepperoni/Cheese/Cookies/Oreo): ").lower()
+
+match aying_flavor:
+    case "hawaiian":
+        print("You selected Hawaiian Pizza.")
+    case "pepperoni":
+        print("You selected Pepperoni Pizza.")
+    case "cheese":
+        print("You selected Cheese Pizza.")
+    case "cookies":
+        print("You selected Cookies Pizza.")
+    case "oreo":
+        print("You selected Oreo Pizza.")
+    case _:
+        print("Invalid Pizza Flavor.")
+
+aying_size = input("Enter size (Small/Meduim/Large): ").lower()
+
+match aying_size:
+    case "small":
+        aying_price = 250
+    case "meduim":
+        aying_price = 350
+    case "large":
+        aying_price = 450
+
+if aying_price >0:
+    print("Pizza Price: ",aying_price)
