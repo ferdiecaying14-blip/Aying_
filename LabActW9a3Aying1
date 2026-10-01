@@ -1,0 +1,9 @@
+grade = float(input("Enter your grade: "))
+match grade:
+    case 4.0:
+        print("96-100")
+    case 3.5:
+        print("90-95")
+    case _:
+        print("not in range")
+
