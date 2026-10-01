@@ -1,0 +1,39 @@
+print("===== Grade Classifier ===== ".title())
+AyingName = input("Input your name: ")
+AyingItems = int(input("Total items: "))
+AyingScore = int(input("Total scores: "))
+
+AyingTotalpercentage = AyingScore / AyingItems *100
+print(AyingTotalpercentage)
+if AyingTotalpercentage <= 59:
+    print("Remarks: Failed")
+elif AyingTotalpercentage >= 60 and AyingTotalpercentage <= 69:
+    print("Remarks: Passed")
+elif AyingTotalpercentage >= 70 and AyingTotalpercentage <= 79:
+    print("Remarks: Passed")
+elif AyingTotalpercentage >= 80 and AyingTotalpercentage <= 89:
+    print("Remarks: Passed")
+elif AyingTotalpercentage >= 90 and AyingTotalpercentage <= 99:
+    print("Remarks: Passed")
+else:
+    print("invalid")
+
+if AyingTotalpercentage <= 59:
+        print("Colors: red")
+elif AyingTotalpercentage >= 60 and AyingTotalpercentage <= 69:
+        print("Colors: orange")
+elif AyingTotalpercentage >= 70 and AyingTotalpercentage <= 79:
+        print("Colors: Yellow")
+elif AyingTotalpercentage >= 80 and AyingTotalpercentage <= 89:
+        print("Colors: Yellow Green")
+elif AyingTotalpercentage >= 90 and AyingTotalpercentage <= 99:
+        print("Colors: Light Green")
+else:
+       print("invalid")
+
+print("\n==== Grade Result ====")
+print(f"NAME: {AyingName}")
+print(f"ITEMS: {AyingItems}")
+print(f"SCORE: {AyingScore}")
+print(f"TOTAL PERCENTAGE: {AyingTotalpercentage}")\
+
