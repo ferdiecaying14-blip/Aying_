@@ -1,0 +1,9 @@
+# Practice 3
+students = {}
+number = int(input("Enter number of students: "))
+for i in range(number):
+    print("\nStudent", i + 1)
+    name = input("Enter student name: ")
+    grade1 = float(input("Enter Grade 1: "))
+    grade2 = float(input("Enter Grade 2: "))
+    grade3 = float(input("Enter Grade 3: "))
