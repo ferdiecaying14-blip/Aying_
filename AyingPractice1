@@ -1,0 +1,44 @@
+# Practice 1
+students = {
+    "Albert": 85,
+    "John": 90,
+    "Shoriki": 78,
+    "James": 95
+}
+
+print("STUDENT GRADES")
+print("------------------------------")
+print("Albert", students["Albert"])
+print("John", students["John"])
+
+# Add a new student
+students["Ella"] = 88
+
+# Update a student's grade
+students["Shoriki"] = 82
+students["James"] = 91
+
+name1 = input("Enter student name: ")
+grade1 = int(input("Enter grade: "))
+students[name1] = grade1
+
+print(students)
+
+print("Updated Student Grades")
+print("-----------------------------")
+
+for name, grade in students.items():
+    print(name, ":", grade)
+
+# Display statistics
+grades = list(students.values())
+
+print("\nGRADE STATISTICS")
+print("-----------------------------")
+print("Minimum:", min(grades))
+print("Maximum:", max(grades))
+print("Difference:", max(grades) - min(grades))
+print("Average:", sum(grades) / len(grades))
+print("Sorted:", sorted(grades))
+
+
