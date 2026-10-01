@@ -1,0 +1,50 @@
+print("==== PAYROLL SYSTEM ====")
+
+aying_name = input("Enter your name: ")
+aying_hours = float(input("Enter hours: "))
+aying_choice = int(input(" 1. Janitor, 2. Clerk, 3. Cashier, 4. Manager: "))
+aying_position  =""
+aying_salary = 0
+
+if aying_choice==1:
+    aying_position ="Janitor"
+    aying_salary = 10000
+
+elif aying_choice==2:
+    aying_position ="Clerk"
+    aying_salary = 20000
+
+elif aying_choice==3:
+    aying_position ="Cashier"
+    aying_salary = 25000
+
+elif aying_choice==4:
+    aying_position ="Manager"
+    aying_salary = 35000
+
+else:
+    print("Invalid")
+
+aying_halfmonth = aying_salary/2
+aying_rateperhour = aying_halfmonth/88
+aying_absenceded = 0
+aying_netsalary = 0
+
+if aying_hours >=88:
+    aying_extrahours = aying_hours - 88
+    aying_otrate = aying_rateperhour * 1.25
+    aying_overtimepay = aying_otrate * aying_extrahours
+    aying_netsalary = aying_halfmonth + aying_extrahours
+    print("overtimePay: ",aying_overtimepay)
+
+elif aying_hours <=88:
+    aying_absence = 88 - aying_hours
+    aying_absenceded = aying_rateperhour * 1.10 * aying_absence
+    aying_netsalary = aying_halfmonth - aying_absenceded
+    print(f"absence deduction: {aying_absenceded:,.2f}")
+
+else:
+    print("Invalid")
+
+print(f"Net salary :{aying_netsalary:,.2f}")
+print("Position: ",aying_position)
