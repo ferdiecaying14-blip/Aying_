@@ -1,0 +1,44 @@
+Aying_Salary = {
+    "E104": {
+        "EmpName": "Gaven Roy Alaton",
+        "DailyHrs": [8, 9, 8.5, 10, 8]
+    },
+    "E601": {
+        "EmpName": "Anton James Brigole",
+        "DailyHrs": [9, 10, 8, 8, 9]
+    }
+}
+print("-------------------------------")
+Aying_EmployeeID = input("Enter Employee ID: ")
+
+if Aying_EmployeeID in Aying_Salary:
+    Aying_Employee = Aying_Salary[Aying_EmployeeID]
+
+    Aying_WeeklyBasic = 900
+    Aying_RatePerHour = Aying_WeeklyBasic / 40
+    Ayiing_totalWeeklyhours = sum(Aying_Employee["DailyHrs"])
+
+    # Calculate overtime
+    Aying_OvertimeHours = 0
+
+    for DutyHours in Aying_Employee["DailyHrs"]:
+        if DutyHours > 8:
+            Aying_OvertimeHours += DutyHours - 8
+
+    Aying_overtime = Aying_OvertimeHours * 1.5 * Aying_RatePerHour
+    Aying_GrossPay = (40 * Aying_RatePerHour) + Aying_overtime
+
+    print("-------------------------------")
+    print("Employee Name:", Aying_Employee["EmpName"])
+    print("Daily Hours:", Aying_Employee["DailyHrs"])
+    print("Weekly Basic:", Aying_WeeklyBasic)
+    print("Rate per Hour:", Aying_RatePerHour)
+    print("Total Weekly Hours:", Ayiing_totalWeeklyhours)
+    print("Overtime Hours:", Aying_OvertimeHours)
+    print("Overtime:", Aying_overtime)
+    print("Gross Pay:", Aying_GrossPay)
+
+    print("-------------------------------")
+else:
+    print("Not found")
+
